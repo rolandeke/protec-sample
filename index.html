@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protec Security - Personnel Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1><i class="fas fa-shield-alt"></i> PROTEC SECURITY SERVICES</h1>
+    </div>
+
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="badge-number">ID: SSS-42785</div>
+          <img src="/img/personnel.png" alt="Agent Photo" class="profile-img" />
+          <h1 class="profile-name">Chinedum Eke</h1>
+          <p class="profile-position">Senior Security Supervisor</p>
+          <span class="status-badge active">Active</span>
+        </div>
+
+        <div class="profile-details">
+          <div class="deployment-info">
+            <div class="detail-label">Current Deployment</div>
+            <div class="detail-value">
+              <i class="fas fa-map-marker-alt"></i>
+              Hotel 5/10 Bai Bureh Road, Western Urban
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h2 class="section-title">
+              <i class="fas fa-user"></i> Personal Information
+            </h2>
+            <div class="detail-grid">
+              <div class="detail-item">
+                <div class="detail-label">Full Name</div>
+                <div class="detail-value">Chinedum Roland Eke</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Date of Birth</div>
+                <div class="detail-value">June 15, 1985</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Gender</div>
+                <div class="detail-value">Male</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Height</div>
+                <div class="detail-value">6'2" (188 cm)</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Weight</div>
+                <div class="detail-value">210 lbs (95 kg)</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Skin Tone</div>
+                <div class="detail-value">Medium Brown</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h2 class="section-title">
+              <i class="fas fa-id-badge"></i> Professional Details
+            </h2>
+            <div class="detail-grid">
+              <div class="detail-item">
+                <div class="detail-label">Position</div>
+                <div class="detail-value">Senior Security Supervisor</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Department</div>
+                <div class="detail-value">Commercial Security</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Years of Service</div>
+                <div class="detail-value">8 years</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Certification Level</div>
+                <div class="detail-value">Level III</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-label">Specialized Training</div>
+                <div class="detail-value">Crisis Management, First Aid</div>
+              </div>
+              <!-- <div class="detail-item">
+                <div class="detail-label">Last Verified</div>
+                <div class="detail-value">April 12, 2025</div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="actions">
+            <a href="#" class="btn btn-primary" id="reportBtn">
+              <i class="fas fa-flag"></i> Report Misconduct
+            </a>
+            <a href="tel:+23278822683" class="btn btn-secondary">
+              <i class="fas fa-phone-alt"></i> Agency Hotline
+            </a>
+          </div>
+
+          <!-- <div class="verification-code">
+            <div class="qr-container">
+              <img
+                src="/api/placeholder/100/100"
+                alt="Verification QR"
+                class="qr-code"
+              />
+            </div>
+            <div class="verification-label">Verification Code</div>
+            <div class="verification-value">SD78-4K9R-32LP</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="report-modal" id="reportModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <h2 class="form-title">Report Misconduct</h2>
+        <form id="reportForm">
+          <div class="form-group">
+            <label for="reporterName">Your Name</label>
+            <input type="text" id="reporterName" required />
+          </div>
+          <div class="form-group">
+            <label for="reporterContact">Contact Information</label>
+            <input type="text" id="reporterContact" required />
+          </div>
+          <div class="form-group">
+            <label for="incidentDate">Incident Date</label>
+            <input type="date" id="incidentDate" required />
+          </div>
+          <div class="form-group">
+            <label for="incidentLocation">Incident Location</label>
+            <input type="text" id="incidentLocation" required />
+          </div>
+          <div class="form-group">
+            <label for="incidentType">Type of Misconduct</label>
+            <select id="incidentType" required>
+              <option value="">-- Select Type --</option>
+              <option value="unprofessional">Unprofessional Conduct</option>
+              <option value="excessive">Excessive Force</option>
+              <option value="negligence">Negligence</option>
+              <option value="harassment">Harassment</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="incidentDescription">Description of Incident</label>
+            <textarea id="incidentDescription" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit Report</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Protec Security Services. All rights reserved. | For
+      verification purposes only.
+    </footer>
+
+    <script>
+      // Modal functionality
+      const reportBtn = document.getElementById("reportBtn");
+      const reportModal = document.getElementById("reportModal");
+      const closeModal = document.getElementById("closeModal");
+      const reportForm = document.getElementById("reportForm");
+
+      reportBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        reportModal.style.display = "flex";
+      });
+
+      closeModal.addEventListener("click", function () {
+        reportModal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (e) {
+        if (e.target === reportModal) {
+          reportModal.style.display = "none";
+        }
+      });
+
+      reportForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert(
+          "Thank you for your report. It has been submitted and will be reviewed by our internal affairs department."
+        );
+        reportModal.style.display = "none";
+        reportForm.reset();
+      });
+
+      // Status badge styling based on status
+      // This would be dynamic in a real application
+      function setStatusBadge(status) {
+        const badge = document.querySelector(".status-badge");
+        badge.className = "status-badge";
+
+        if (status === "active") {
+          badge.classList.add("active");
+          badge.textContent = "Active";
+        } else if (status === "suspended") {
+          badge.classList.add("suspended");
+          badge.textContent = "Suspended";
+        } else if (status === "terminated") {
+          badge.classList.add("terminated");
+          badge.textContent = "Terminated";
+        }
+      }
+
+      // Example of how to change status (would be dynamic in real app)
+      // setStatusBadge('active');
+    </script>
+  </body>
+</html>
